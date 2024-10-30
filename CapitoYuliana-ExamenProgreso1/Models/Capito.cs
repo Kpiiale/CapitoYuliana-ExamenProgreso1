@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CapitoYuliana_ExamenProgreso1.Models
 {
@@ -15,6 +16,10 @@ namespace CapitoYuliana_ExamenProgreso1.Models
         public int Edad { get; set; }
         public float Altura { get; set; }
         public bool MayorDeEdad { get; set; }
+        public Celular celular { get; set; }
+        [ForeignKey("Celular")]
+        public Celular? Celular { get; protected set; }
+
 
     }
 }
