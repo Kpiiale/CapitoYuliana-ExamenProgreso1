@@ -14,11 +14,15 @@ namespace CapitoYuliana_ExamenProgreso1.Models
         public string Email { get; set; }
         [Range(0,120)]
         public int Edad { get; set; }
+        [Required]
         public float Altura { get; set; }
+        [Required]
         public bool MayorDeEdad { get; set; }
-        public Celular celular { get; set; }
+        [Required]
+        public Celular? celular { get; set; }
+
         [ForeignKey("Celular")]
-        public Celular? Celular { get; protected set; }
+        public int idCelular { get; protected set; }
 
 
     }
