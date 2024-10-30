@@ -8,9 +8,11 @@ namespace CapitoYuliana_ExamenProgreso1.Models
         [Key]
         public int Id { get; set; }
         [StringLength(100)]
+
         public string Modelo { get; set; }
         [Range(2000,2025)]
         public int Anio { get; set; }
+        [Required]
         public float Precio { get; set; }
     }
 }
